@@ -2,7 +2,10 @@
 
 use clap::Parser;
 use std::path::PathBuf;
-use std::fs;
+use std::fs::File;
+use std::io::{self, prelude::*, BufReader};
+
+mod dictionary;
 
 #[derive(Debug)]
 #[derive(Parser)]
@@ -10,9 +13,14 @@ struct Cli {
     path: PathBuf,
 }
 
-fn main() {
+fn main() -> io::Result<()> {
     let args = Cli::parse();
-    let contents = fs::read_to_string(args.path)
-        .expect("Error reading file");
-    println!("{}", contents);
+    let file = File::open(args.path)?;
+    let reader = BufReader::new(file);
+
+    for line in reader.lines() {
+        println!("{}", line?);
+    }
+
+    Ok(())
 }
