@@ -1,0 +1,24 @@
+dict = ${ entry* }
+entry = ${!("\n") ~ word ~ definition* }
+
+word = ${ noise? ~ "@" ~ spelling ~ pronunciation? ~ "\\n" }
+spelling = ${ word_char* }
+pronunciation = ${ "[" ~ word_char* ~ "]" }
+definition = ${ pos_wrapper? ~ desc_wrapper ~ sentence* }
+
+sentence = ${ "=" ~ viet ~ "+" ~ eng ~ ("\\n" | "\n") }
+desc_wrapper = _{ "- " ~ description ~ ("\\n" | "\n") }
+pos_wrapper = _{ ("*" | "* ") ~ part_of_speech ~ ("\\n" | "\n") }
+
+noise = _{ word_char* }
+description = @{ desc_char* }
+viet = @{ sent_char* }
+eng = @{ sent_char* }
+part_of_speech = @{ pos_char* }
+
+desc_char = _{ !("\\n" | "\n") ~ ANY }
+word_char = _{ !("\\n" | "\n" | "[" | "]" | "@") ~ ANY }
+sent_char = _{ !("\\n" | "\n" | "=" | "+") ~ ANY }
+pos_char = _{ !("\\n" | "\n" | "*") ~ ANY }
+
+WHITESPACE = _{ " " }
