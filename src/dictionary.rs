@@ -179,3 +179,54 @@ fn test_parse_stardict_with_pronunciation() {
 
     assert_eq!(parse_stardict(raw), dict);
 }
+
+#[test]
+fn test_parse_stardict_multiple_entries() {
+    let raw = "a-ba-giua	@a-ba-giua [abagiua]\\n- \
+    (từ gốc tiếng Pháp là Abat-jour) chụp đèn; chao đèn\n \
+    an phận	@an phận\\n* verb\\n- To feel smug\\n=tư tưởng \
+   an phận+Smugness, smug feeling\\n=an phận thủ thường+to \
+   feel smug about one's present circumstances\n";
+
+    let dict = Dictionary {
+        entries: vec![
+            Entry {
+                word: Word {
+                    spelling: "a-ba-giua".to_string(),
+                    pronunciation: "[abagiua]".to_string(),
+                },
+                defs: vec![
+                    Definition {
+                        part_of_speech: "".to_string(),
+                        definition: "(từ gốc tiếng Pháp là Abat-jour) chụp đèn; chao đèn".to_string(),
+                        sentences: vec![],
+                    },
+                ],
+            },
+            Entry {
+                word: Word {
+                    spelling: "an phận".to_string(),
+                    pronunciation: "".to_string(),
+                },
+                defs: vec![
+                    Definition {
+                        part_of_speech: "verb".to_string(),
+                        definition: "To feel smug".to_string(),
+                        sentences: vec![
+                            Sentence { 
+                                viet: "tư tưởng an phận".to_string(), 
+                                eng: "Smugness, smug feeling".to_string(),
+                            },
+                            Sentence { 
+                                viet: "an phận thủ thường".to_string(), 
+                                eng: "to feel smug about one's present circumstances".to_string(),
+                            },
+                        ],
+                    },
+                ],
+            },
+        ]
+    };
+
+    assert_eq!(parse_stardict(raw), dict);
+}
