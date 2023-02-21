@@ -1,9 +1,14 @@
 #![allow(unused)]
+use std::env;
 
 use clap::Parser;
 use std::path::PathBuf;
 use std::fs::File;
 use std::io::{self, prelude::*, BufReader};
+
+extern crate pest;
+#[macro_use]
+extern crate pest_derive; 
 
 mod dictionary;
 
