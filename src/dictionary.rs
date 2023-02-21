@@ -40,8 +40,14 @@ fn parse_sentence(p: Pair<Rule>) -> Sentence {
     let mut sentence: Sentence = Default::default();
     for field in p.into_inner() {
         match field.as_rule() {
-            Rule::viet => sentence.viet = field.as_str().to_string(),
-            Rule::eng => sentence.eng = field.as_str().to_string(),
+            Rule::viet => sentence.viet = field
+                .as_str()
+                .trim()
+                .to_string(),
+            Rule::eng => sentence.eng = field
+                .as_str()
+                .trim()
+                .to_string(),
             _ => println!("Error, fields not found"),
         }
     }
@@ -52,8 +58,14 @@ fn parse_def(p: Pair<Rule>) -> Definition {
     let mut definition: Definition = Default::default();
     for field in p.into_inner() {
         match field.as_rule() {
-            Rule::part_of_speech => definition.part_of_speech = field.as_str().to_string(),
-            Rule::description => definition.definition = field.as_str().to_string(),
+            Rule::part_of_speech => definition.part_of_speech = field
+                .as_str()
+                .trim()
+                .to_string(),
+            Rule::description => definition.definition = field
+                .as_str()
+                .trim()
+                .to_string(),
             Rule::sentence => definition.sentences.push(parse_sentence(field)),
             _ => println!("Error, fields not found"),
         }
@@ -65,8 +77,14 @@ fn parse_word(p: Pair<Rule>) -> Word {
     let mut word: Word = Default::default();
     for field in p.into_inner() {
         match field.as_rule() {
-            Rule::spelling => word.spelling = field.as_str().to_string(),
-            Rule::pronunciation => word.pronunciation = field.as_str().to_string(),
+            Rule::spelling => word.spelling = field
+                .as_str()
+                .trim()
+                .to_string(),
+            Rule::pronunciation => word.pronunciation = field
+                .as_str()
+                .trim()
+                .to_string(),
             _ => println!("Error, fields not found"),
         }
     }
@@ -102,7 +120,7 @@ pub fn parse_stardict(raw: &str) -> Dictionary {
 }
 
 #[test]
-fn test_parse_stardict() {
+fn test_parse_stardict_basic() {
     let raw = "an phận	@an phận\\n* verb\\n- To feel smug\\n=tư tưởng \
    an phận+Smugness, smug feeling\\n=an phận thủ thường+to \
    feel smug about one's present circumstances\n";
@@ -128,6 +146,31 @@ fn test_parse_stardict() {
                                 eng: "to feel smug about one's present circumstances".to_string(),
                             },
                         ],
+                    },
+                ],
+            },
+        ]
+    };
+
+    assert_eq!(parse_stardict(raw), dict);
+}
+
+#[test]
+fn test_parse_stardict_with_pronunciation() {
+    let raw = "a-ba-giua	@a-ba-giua [abagiua]\\n- (từ gốc tiếng Pháp là Abat-jour) chụp đèn; chao đèn\n";
+
+    let dict = Dictionary {
+        entries: vec![
+            Entry {
+                word: Word {
+                    spelling: "a-ba-giua".to_string(),
+                    pronunciation: "[abagiua]".to_string(),
+                },
+                defs: vec![
+                    Definition {
+                        part_of_speech: "".to_string(),
+                        definition: "(từ gốc tiếng Pháp là Abat-jour) chụp đèn; chao đèn".to_string(),
+                        sentences: vec![],
                     },
                 ],
             },
