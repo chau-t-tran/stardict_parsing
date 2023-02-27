@@ -46,8 +46,9 @@ fn test_parse_entry_by_entry_from_file() {
     let file = File::open("src/viet-eng.txt")
         .expect("Could not open file");
     let mut entry_iterator = EntryIterator::new(file);
-    let entry: Entry = entry_iterator.next().unwrap();
-    let expected = Entry {
+    
+    let first_entry: Entry = entry_iterator.next().unwrap();
+    let first_expected = Entry {
         word: "00-database-info".to_string(),
         defs: vec![
             Definition {
@@ -81,7 +82,34 @@ fn test_parse_entry_by_entry_from_file() {
                     Public License for more details.".to_string(),
                 sentences: vec![],
             },
-        ]
+        ],
     };
-    assert_eq!(entry, expected);
+
+    let second_entry: Entry = entry_iterator.next().unwrap();
+    let second_expected = Entry {
+        word: "00-database-short".to_string(),
+        defs: vec![
+            Definition {
+                part_of_speech: "".to_string(),
+                definition: "FVDP Vietnamese-English dictionary".to_string(),
+                sentences: vec![],
+            },
+        ],
+    };
+
+    let third_entry: Entry = entry_iterator.next().unwrap();
+    let third_expected = Entry {
+        word: "00-database-url".to_string(),
+        defs: vec![
+            Definition {
+                part_of_speech: "".to_string(),
+                definition: "http://www.informatik.uni-leipzig.de/~duc/Dict/".to_string(),
+                sentences: vec![],
+            },
+        ],
+    };
+
+    assert_eq!(first_entry, first_expected);
+    assert_eq!(second_entry, second_expected);
+    assert_eq!(third_entry, third_expected);
 }
