@@ -8,26 +8,26 @@ pub struct StardictParser;
 
 #[derive(PartialEq, Eq, Debug, Clone, Default)]
 pub struct Sentence {
-    viet: String,
-    eng: String,
+    pub viet: String,
+    pub eng: String,
 }
 
 #[derive(PartialEq, Eq, Debug, Clone, Default)]
 pub struct Definition {
-    part_of_speech: String,
-    definition: String,
-    sentences: Vec<Sentence>,
+    pub part_of_speech: String,
+    pub definition: String,
+    pub sentences: Vec<Sentence>,
 }
 
 #[derive(PartialEq, Eq, Debug, Clone, Default)]
 pub struct Entry {
-    word: String,
-    defs: Vec<Definition>,
+    pub word: String,
+    pub defs: Vec<Definition>,
 }
 
 #[derive(PartialEq, Eq, Debug, Clone, Default)]
 pub struct Dictionary {
-    entries: Vec<Entry>
+    pub entries: Vec<Entry>
 }
 
 fn parse_sentence(p: Pair<Rule>) -> Sentence {

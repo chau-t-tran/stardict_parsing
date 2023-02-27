@@ -1,4 +1,3 @@
-dict = ${ (entry ~ "\n"?)* }
 entry = ${ word_wrapper ~ definition+ }
 
 word_wrapper = _{ "@" ~ word ~ "\n" }

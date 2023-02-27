@@ -1,12 +1,52 @@
 use crate::dictionary::*;
+use std::io::{self, prelude::*, BufReader};
+use std::fs::File;
+
+struct EntryIterator {
+    reader: BufReader<File>,
+}
+
+impl Iterator for EntryIterator {
+    type Item = Entry;
+    fn next(&mut self) -> Option<Self::Item> {
+        let mut lines = Vec::new();
+        loop {
+            let mut buffer = String::new();
+            match self.reader.read_line(&mut buffer) {
+                Ok(0) => break, // end of line
+                Ok(_) => {
+                    let line = buffer.trim().to_string();
+                    lines.push(line.to_string());   // yes, this includes pushing the empty line in order to
+                                                    // append a new line character to terminate the sentence
+                    if line.is_empty() {
+                        break;
+                    }
+                },
+                Err(_) => break,
+            }
+        }
+        let raw = lines.join("\n");
+        let entry = parse_entry(raw.as_str());
+        Some(entry)
+    }
+}
+
+impl EntryIterator {
+    fn new(file: File) -> EntryIterator {
+        EntryIterator {
+            reader: BufReader::new(file),
+        }
+    }
+}
 
 #[test]
 fn test_parse_entry_by_entry_from_file() {
     use std::fs::File;
 
-    let file = File::open("viet-eng.txt");
-    let entry_iterator = EntryIterator::new(file);
-    let entry: Entry = entry_iterator.next();
+    let file = File::open("src/viet-eng.txt")
+        .expect("Could not open file");
+    let mut entry_iterator = EntryIterator::new(file);
+    let entry: Entry = entry_iterator.next().unwrap();
     let expected = Entry {
         word: "00-database-info".to_string(),
         defs: vec![
