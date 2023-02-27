@@ -11,6 +11,7 @@ extern crate pest;
 extern crate pest_derive; 
 
 mod dictionary;
+mod iterator;
 
 #[derive(Debug)]
 #[derive(Parser)]
@@ -24,7 +25,8 @@ fn main() -> io::Result<()> {
     let reader = BufReader::new(file);
 
     for line in reader.lines() {
-        println!("{}", line?);
+        let entry = dictionary::parse_entry(&(line?));
+        println!("{:?}", entry);
     }
 
     Ok(())
