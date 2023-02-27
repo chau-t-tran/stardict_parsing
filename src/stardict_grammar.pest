@@ -1,24 +1,21 @@
-dict = ${ entry* }
-entry = ${!("\n") ~ word ~ definition* }
+dict = ${ (entry ~ "\n"?)* }
+entry = ${ word_wrapper ~ definition+ }
 
-word = ${ noise? ~ "@" ~ spelling ~ pronunciation? ~ "\\n" }
-spelling = ${ word_char* }
-pronunciation = ${ "[" ~ word_char* ~ "]" }
-definition = ${ pos_wrapper? ~ desc_wrapper ~ sentence* }
+word_wrapper = _{ "@" ~ word ~ "\n" }
+definition = { pos_wrapper? ~ def_wrapper ~ sentence* }
+pos_wrapper = _{ ("* " | "*") ~ part_of_speech ~ "\n" }
+def_wrapper = _{ ("- " | "-") ~ description ~ "\n" }
+sentence = ${ ("=" | " =") ~ viet ~ "+" ~ eng ~ ("\n" | "\r") }
 
-sentence = ${ ("=" | " =") ~ viet ~ "+" ~ eng ~ ("\\n" | "\n" | "\r") }
-desc_wrapper = _{ ("- " | "-") ~ description ~ ("\\n" | "\n") }
-pos_wrapper = _{ ("* " | "*") ~ part_of_speech ~ ("\\n" | "\n") }
-
-noise = _{ word_char* }
-description = @{ desc_char* }
+word = ${ word_char* }
+description = @{ def_char* }
 viet = @{ sent_char* }
 eng = @{ sent_char* }
 part_of_speech = @{ pos_char* }
 
-desc_char = _{ !("\\n" | "\n") ~ ANY }
-word_char = _{ !("\\n" | "\n" | "[" | "]" | "@") ~ ANY }
-sent_char = _{ !("\\n" | "\n" |"=" | "+" | "\r") ~ ANY }
-pos_char = _{ !("\\n" | "\n" | "*") ~ ANY }
+def_char = _{ !("\n") ~ ANY }
+word_char = _{ !("\n" | "@") ~ ANY }
+sent_char = _{ !("\n" |"=" | "+" | "\r") ~ ANY }
+pos_char = _{ !("\n" | "*") ~ ANY }
 
 WHITESPACE = _{ " " }

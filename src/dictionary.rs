@@ -20,14 +20,8 @@ pub struct Definition {
 }
 
 #[derive(PartialEq, Eq, Debug, Clone, Default)]
-pub struct Word {
-    spelling: String,
-    pronunciation: String,
-}
-
-#[derive(PartialEq, Eq, Debug, Clone, Default)]
 pub struct Entry {
-    word: Word,
+    word: String,
     defs: Vec<Definition>,
 }
 
@@ -73,29 +67,18 @@ fn parse_def(p: Pair<Rule>) -> Definition {
     definition
 }
 
-fn parse_word(p: Pair<Rule>) -> Word {
-    let mut word: Word = Default::default();
-    for field in p.into_inner() {
-        match field.as_rule() {
-            Rule::spelling => word.spelling = field
-                .as_str()
-                .trim()
-                .to_string(),
-            Rule::pronunciation => word.pronunciation = field
-                .as_str()
-                .trim()
-                .to_string(),
-            _ => println!("Error, fields not found"),
-        }
-    }
-    word
-}
-
-fn parse_entry(p: Pair<Rule>) -> Entry {
+pub fn parse_entry(raw: &str) -> Entry {
+    let data = StardictParser::parse(Rule::entry, raw)
+        .expect("cannot parse")
+        .next()
+        .unwrap();
     let mut entry: Entry = Default::default();
-    for field in p.into_inner() {
+    for field in data.into_inner() {
         match field.as_rule() {
-            Rule::word => entry.word = parse_word(field),
+            Rule::word => entry.word = field
+                .as_str()
+                .trim()
+                .to_string(),
             Rule::definition => entry.defs.push(parse_def(field)),
             _ => println!("Error, fields not found"),
         }
@@ -103,130 +86,34 @@ fn parse_entry(p: Pair<Rule>) -> Entry {
     entry
 }
 
-pub fn parse_stardict(raw: &str) -> Dictionary {
-    let data = StardictParser::parse(Rule::dict, raw)
-        .expect("cannot parse")
-        .next()
-        .unwrap();
-
-    let mut dict: Dictionary = Default::default();
-    for entry in data.into_inner() {
-        match entry.as_rule() {
-            Rule::entry => dict.entries.push(parse_entry(entry)),
-            _ => println!("Error: not entry"),
-        }
-    }
-    dict
-}
-
 #[test]
-fn test_parse_stardict_basic() {
-    let raw = "an phận	@an phận\\n* verb\\n- To feel smug\\n=tư tưởng \
-   an phận+Smugness, smug feeling\\n=an phận thủ thường+to \
-   feel smug about one's present circumstances\n";
+fn test_parse_entry_basic() {
+    let raw = 
+        "@an phận\n\
+        * verb\n\
+        - To feel smug\n\
+        =tư tưởng an phận+Smugness, smug feeling\n\
+        =an phận thủ thường+to feel smug about one's present circumstances \n\n";
 
-    let dict = Dictionary {
-        entries: vec![
-            Entry {
-                word: Word {
-                    spelling: "an phận".to_string(),
-                    pronunciation: "".to_string(),
-                },
-                defs: vec![
-                    Definition {
-                        part_of_speech: "verb".to_string(),
-                        definition: "To feel smug".to_string(),
-                        sentences: vec![
-                            Sentence { 
-                                viet: "tư tưởng an phận".to_string(), 
-                                eng: "Smugness, smug feeling".to_string(),
-                            },
-                            Sentence { 
-                                viet: "an phận thủ thường".to_string(), 
-                                eng: "to feel smug about one's present circumstances".to_string(),
-                            },
-                        ],
+    let entry = Entry {
+        word: "an phận".to_string(),
+        defs: vec![
+            Definition {
+                part_of_speech: "verb".to_string(),
+                definition: "To feel smug".to_string(),
+                sentences: vec![
+                    Sentence { 
+                        viet: "tư tưởng an phận".to_string(), 
+                        eng: "Smugness, smug feeling".to_string(),
+                    },
+                    Sentence { 
+                        viet: "an phận thủ thường".to_string(), 
+                        eng: "to feel smug about one's present circumstances".to_string(),
                     },
                 ],
             },
-        ]
+        ],
     };
 
-    assert_eq!(parse_stardict(raw), dict);
-}
-
-#[test]
-fn test_parse_stardict_with_pronunciation() {
-    let raw = "a-ba-giua	@a-ba-giua [abagiua]\\n- (từ gốc tiếng Pháp là Abat-jour) chụp đèn; chao đèn\n";
-
-    let dict = Dictionary {
-        entries: vec![
-            Entry {
-                word: Word {
-                    spelling: "a-ba-giua".to_string(),
-                    pronunciation: "[abagiua]".to_string(),
-                },
-                defs: vec![
-                    Definition {
-                        part_of_speech: "".to_string(),
-                        definition: "(từ gốc tiếng Pháp là Abat-jour) chụp đèn; chao đèn".to_string(),
-                        sentences: vec![],
-                    },
-                ],
-            },
-        ]
-    };
-
-    assert_eq!(parse_stardict(raw), dict);
-}
-
-#[test]
-fn test_parse_stardict_multiple_entries() {
-    let raw = "a-ba-giua	@a-ba-giua [abagiua]\\n- \
-    (từ gốc tiếng Pháp là Abat-jour) chụp đèn; chao đèn\n \
-    an phận	@an phận\\n* verb\\n- To feel smug\\n=tư tưởng \
-   an phận+Smugness, smug feeling\\n=an phận thủ thường+to \
-   feel smug about one's present circumstances\n";
-
-    let dict = Dictionary {
-        entries: vec![
-            Entry {
-                word: Word {
-                    spelling: "a-ba-giua".to_string(),
-                    pronunciation: "[abagiua]".to_string(),
-                },
-                defs: vec![
-                    Definition {
-                        part_of_speech: "".to_string(),
-                        definition: "(từ gốc tiếng Pháp là Abat-jour) chụp đèn; chao đèn".to_string(),
-                        sentences: vec![],
-                    },
-                ],
-            },
-            Entry {
-                word: Word {
-                    spelling: "an phận".to_string(),
-                    pronunciation: "".to_string(),
-                },
-                defs: vec![
-                    Definition {
-                        part_of_speech: "verb".to_string(),
-                        definition: "To feel smug".to_string(),
-                        sentences: vec![
-                            Sentence { 
-                                viet: "tư tưởng an phận".to_string(), 
-                                eng: "Smugness, smug feeling".to_string(),
-                            },
-                            Sentence { 
-                                viet: "an phận thủ thường".to_string(), 
-                                eng: "to feel smug about one's present circumstances".to_string(),
-                            },
-                        ],
-                    },
-                ],
-            },
-        ]
-    };
-
-    assert_eq!(parse_stardict(raw), dict);
+    assert_eq!(parse_entry(raw), entry);
 }
