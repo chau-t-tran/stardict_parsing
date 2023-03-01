@@ -1,6 +1,6 @@
 use crate::dictionary::*;
 use std::fs::File;
-use std::io::{self, prelude::*, BufReader};
+use std::io::{self, prelude::*, BufReader, SeekFrom};
 use pretty_assertions::{assert_eq, assert_ne};
 
 struct EntryIterator {
@@ -17,16 +17,17 @@ impl Iterator for EntryIterator {
                 Ok(0) => break, // end of line
                 Ok(_) => {
                     let line = buffer.trim().to_string();
-                    lines.push(line.to_string()); // yes, this includes pushing the empty line in order to
-                                                  // append a new line character to terminate the sentence
-                    if line.is_empty() {
+                    if line.contains("@") && lines.len() > 0 {
+                        self.reader.seek(SeekFrom::Current(-((line.len()+2) as i64)));
                         break;
                     }
+                    lines.push(line.to_string()); // yes, this includes pushing the empty line in order to
                 }
                 Err(_) => break,
             }
         }
         let raw = lines.join("\n");
+        println!("INPUT: {}", raw);
         let entry = parse_entry(raw.as_str());
         Some(entry)
     }
@@ -119,4 +120,16 @@ fn test_parse_entry_by_entry_from_file() {
     assert_eq!(first_entry, first_expected);
     assert_eq!(second_entry, second_expected);
     assert_eq!(third_entry, third_expected);
+}
+
+#[test]
+fn test_parse_until_end() {
+    use std::fs::File;
+
+    let file = File::open("src/viet-eng.txt").expect("Could not open file");
+    let mut entry_iterator = EntryIterator::new(file);
+
+    loop {
+        println!("{:?}", entry_iterator.next())
+    }
 }
