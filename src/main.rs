@@ -22,12 +22,6 @@ struct Cli {
 fn main() -> io::Result<()> {
     let args = Cli::parse();
     let file = File::open(args.path)?;
-    let reader = BufReader::new(file);
-
-    for line in reader.lines() {
-        let entry = dictionary::parse_entry(&(line?));
-        println!("{:?}", entry);
-    }
 
     Ok(())
 }
