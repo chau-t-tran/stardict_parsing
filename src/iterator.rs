@@ -14,7 +14,7 @@ impl Iterator for EntryIterator {
         loop {
             let mut buffer = String::new();
             match self.reader.read_line(&mut buffer) {
-                Ok(0) => break, // end of line
+                Ok(0) => return None, // end of line
                 Ok(_) => {
                     let line = buffer.trim().to_string();
                     if line.contains("@") && lines.len() > 0 {
@@ -23,7 +23,7 @@ impl Iterator for EntryIterator {
                     }
                     lines.push(line.to_string()); // yes, this includes pushing the empty line in order to
                 }
-                Err(_) => break,
+                Err(_) => return None,
             }
         }
         let raw = lines.join("\n");
@@ -129,7 +129,7 @@ fn test_parse_until_end() {
     let file = File::open("src/viet-eng.txt").expect("Could not open file");
     let mut entry_iterator = EntryIterator::new(file);
 
-    loop {
-        println!("{:?}", entry_iterator.next())
+    for value in entry_iterator {
+        println!("{:?}", value);
     }
 }
