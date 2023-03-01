@@ -109,6 +109,7 @@
 
 @ạ
 * từ đệm
+- Yes, OK
 =Vâng ạ+yes, sir
 
 @ác
@@ -2190,12 +2191,12 @@
 =cái thời ấy đã qua rồi+that time is gone
 =Tiếng em tiếng ấy quê hương Giọng em ấy giọng tình thương đất nhà+That voice of yours is the voice of the homeland, That tune of yours is the tune of the love for the country
 - Like
+* từ đệm
 =cha nào con nấy, hổ phụ sinh hổ tử+like father, like son
 =chủ nào tớ nấy+like master, like man
-* từ đệm
 =anh ta đi đằng sau ấy+he is coming behind, yes, he is
 
-﻿@ba
+@ba
 - Papa, daddy
 - Three; third
 =Một trăm lẻ ba+One hundred and three
@@ -2538,7 +2539,6 @@
 * noun
 - Suzerain, dominator
 =một quốc gia nằm dưới quyền bá chủ của quốc gia láng giềng hùng mạnh+a country under the suzerainty of its powerful neighbour
-
 =quyền bá chủ+suzerainty, domination, hegemony
 =nuôi cuồng vọng làm bá chủ thế giới+to nurture the wild ambition of world hegemony
 
@@ -3346,7 +3346,6 @@
 @ban đầu
 - At first; Initial
 =ban đầu tôi cứ tưởng anh ta là giám đốc của công ty này, về sau tôi mới phát hiện anh ta là em của giám đốc+at first I thought he was the director of this company, then I discovered that he was the director's younger brother
-
 =ý định ban đầu của anh là gì?+what are your initial intentions?
 
 @ban đêm
@@ -3404,7 +3403,6 @@
 - To award, to grant
 =anh thanh niên này đã được ban tặng huy chương về lòng dũng cảm+this young man has been awarded a medal for bravery
 
-
 @ban thứ
 - (cũ) Hierarhy
 
@@ -3436,8 +3434,6 @@
 - To discuss, to deliberate, to consult, to exchange views on
 =chúng ta nên bàn bạc kỹ xem phải hành động như thế nào+we should deliberate what action to take
 =cần phải bàn bạc với các đối tác trước khi ký hợp đồng+it is advisable to consult with one's partners before signing the contract
-
-
 =bàn bạc tập thể+to hold public discussions
 
 @bàn cãi
@@ -3511,7 +3507,6 @@
 - To transfer, to hand over (officẹ..)
 =bàn giao quyền hành cho một chính phủ được bầu ra+to hand over power to an elected government
 =tôi xin từ chức tổng tư lệnh và bàn giao chức vụ ấy cho người phó của tôi+I am resigning as commander-in-chief and handing over to my deputy
-
 =lễ bàn giao+hand-over ceremony
 =nhận bàn giao, tiếp quản+to take over
 =B sẽ tiếp nhận chức giám đốc khi A về hưu+B will take over as director when A retires
@@ -3659,7 +3654,6 @@
 =ngôn ngữ bản địa+the indigenous language
 =hổ là loài thú bản địa ở ẩn Độ+the tiger is native to India
 =ông ta di cư đến Mỹ, và hoàn toàn trở thành người bản địa+he's emigrated to the USA and gone completely native
-
 =người da trắng ở đây không hoà nhập về mặt xã hội với người bản địa+the white people here don't mix socially with the natives
 
 
@@ -9279,7 +9273,7 @@
 - Battery, small-size dynamo
 
 @Bình Định
-- Quy Nhơn, provincial capital of Bình Định, is 1,065km from Hà Nội on National Highway 1. In the old days, Quy Nhơn was called Thị Nại, the name of a beautiful lake inside the city. Biển Quy Nhơn (Quy Nhon+Sea) has an annual average temperature of 25.7oC and is suitable for tourism the year round. Hoàng Hậu Beach is an ideal place for bathing. Quang Trung Museum is dedicated to Nguyễn Huệ, a national hero of the 18th century. It was built in his native land of Kien My village, Binh Thanh commune, Tây Sơn district, some 45km from Quy Nhon City. Nguyễn Huệ is one of three brothers who led the Tây Sơn Insurrection. In 1788, he led a great force advancing from Phú Xuân (Huế) to the North. It took 35 days and they exacted an overwhelming defeat on the Qing invaders near Thăng Long (now Hà Nội), thereby liberating the royal+capital. He crowned himself Emperor Quang Trung the same year. At Quang Trung Museum, visitors will enjoy music and demonstrations of Võ Tây Sơn (traditional martial arts of Bình Định). In particular, they can+see a young woman, a niece of the 9th generation of Emperor Quang Trung, playing 11 battle drums. In addition, Hoi Van village (Cat Trinh commune, Phù Cát district) is well known for its hot spring. It is composed of+various chemical components useful in the treatment of rheumatism, mental disorder, cardio-vascular diseases and skin diseases. Beside the hot spring, there is a sanatorium which offers steam baths with mineral water of 38oC useful for medical treatment and general health improvement.=Built in 1665 in the Đồ Bàn Citadel - second capital of the Kingdom of Chăm Pa some 27km from Quy Nhơn City - Thap Thap Pagoda is a Buddhist temple, but its decorations are characterized by the Chăm decorative art. Dương Long Chàm Tower is also called Tháp Ngà (Tower of Ivory),+consisting of three towers. This group of towers is one of the most beautiful in Central Vietnam. Banh It Tower is also called Tháp Bạc (Silver Tower). There, tourists can enjoy a panoramic view of this fertile countryside
+- Quy Nhơn, provincial capital of Bình Định, is 1,065km from Hà Nội on National Highway 1. In the old days, Quy Nhơn was called Thị Nại, the name of a beautiful lake inside the city. 
 
 @bình định
 * verb
@@ -9298,7 +9292,7 @@
 =bình giá một tác phẩm+to review a literary work
 
 @bình hành
-- Hình bình hành A parallelogram
+- Hình bình hành; A parallelogram
 
 @bình hương
 - Censer, incense-burner
@@ -12982,6 +12976,9 @@
 -Mail clerk
 
 @bửu bối
+* noun
+- A valuable item, your last precious item
+
 @ca
 * noun
 - Mug (about 1/4 litre)
@@ -16129,7 +16126,8 @@
 - To be the ringleader of
 
 @cầm giữ
-động từ To restrain; to hold on
+* động từ 
+- To restrain; to hold on
 
 @cầm hạc
 - (cũ) Peaceful life (of a mandarin) (cầm: guitar; hạc: flamingo)
@@ -16139,10 +16137,8 @@
 =ăn rau ăn cháo để cầm hơi+to keep body and soul together just on vegetables and soup
 
 @cầm lái
+* verb
 - To take the helm, to be at the wheel, to hold the steering wheel, to steer
-
-@
-- cẩm lai
 * noun
 - Barian kingwood
 
@@ -26500,7 +26496,7 @@
 - (cũ, ít dùng) như dằng dặc
 
 @dăm
-* number five; few; about five
+- number five; few; about five
 
 @dằm
 * noun
@@ -28415,11 +28411,12 @@
 =Người mẹ dịu hiền+A gentle mother
 
 @dịu ngọt
-- Solf and sweet
+- Soft and sweet
 =Những lời dịu ngọt dễ nghe+Soft and sweet words agreeable to the ears
 
 @do
-* trạng ngữ by; because of
+- trạng ngữ
+- by; because of
 
 @do dự
 * verb
@@ -30770,7 +30767,8 @@
 - While
 
 @đang tay
-=Be ruthless enough to Đang tay đánh một em bé+To be ruthless enough to beat a child
+- Be ruthless enough to beat a child
+= Đang tay đánh một em bé+To be ruthless enough to beat a child
 
 
 @đang tay
@@ -31266,7 +31264,9 @@
 - (văn chương) Fairies' home, Elysium
 
 @đào nhiệm
-- 
+* verb
+- to quit work; to abandon responsibilities and duties
+
 @đào nương
 - (cũ) Singsong girl, geisha
 
@@ -32503,7 +32503,10 @@
 - to push; to shove; to thrust
 
 @đẩy đưa
-- 
+* verb
+- to push and pull
+- to beat around the bush; to be not straight-forward
+
 @đẩy lùi
 - cũng như đẩy lui
 -Roll back, push back, drive back
@@ -40071,13 +40074,14 @@
 =No cơm ấm cật, giậm giật mọi nơi
 -(tục ngữ) With Stomamach full and back Wrm, evveryonne feels arounsed
 
-@giần
-* verb, noun sieve
-
 @giần giật
 - (láy) To quiver
 =Rét run giần giật+To quiver with cold
 =Giật gấu vá vai+To rob Peter to pay Paul
+
+@giần
+* verb 
+- To pound and de-shell something - often some sort of rice
 
 @giận
 * verb
@@ -41004,7 +41008,7 @@
 -to file (fig) to elaborate to perfection
 
 @giục
-động từ to push; to hurry; to urge
+- động từ to push; to hurry; to urge
 
 @giùi
 * noun
@@ -43126,13 +43130,14 @@
 =Ngựa non háu đá+Young fighting-cook quickly ruffled
 
 @hay
-* trạng ngữ or; whether
+* trạng ngữ 
+- or; whether
 =trong bốn hay năm ngày+in four or five day
 * adj
 - well; grad; interesting
 =quyển sách này rất hay+This book is very interesting
 * verb
-- to lear; to hear of; to come to know of
+- to learn; to hear of; to come to know of
 =vừa mới hay tin vợ+to have just learned of news from wife frequently; constantly; often
 =hay quên+to often forget
 
@@ -45947,7 +45952,8 @@
 -(từ cũ; nghĩa cũ) Cholera
 
 @hoặc
-* trạng ngữ or; either
+* trạng ngữ 
+- or; either
 =trong ba hoặc bốn ngày+in three on four day
 
 @hoặc giả
@@ -46549,7 +46555,8 @@
 =Hố xí hai ngăn+A tow-compartment latrine
 
 @hộ
-* trạng ngữ for
+* trạng ngữ 
+- for
 
 @hộ bộ
 - (từ cũ; nghĩa cũ) Ministry of Finance
@@ -48602,7 +48609,7 @@
 -Fraternity, affection between friends
 
 @hữu biên
-=Outside right (bóng ddá) 
+-Outside right (bóng ddá) 
 
 @hữu cơ
 * noun
@@ -54061,7 +54068,8 @@
 =đi la cà ở ngoài đường+to loiter on the way
 
 @la đà
-* adv. unsteadily, quiveringly
+* adj 
+- unsteadily, quiveringly
 
 @la đơn
 * noun
@@ -54135,6 +54143,7 @@
 
 @là là
 * adv
+- to skim the water
 =bay là là trên mặt nước+to skim the water
 
 @là lượt
@@ -54520,7 +54529,8 @@
 - to drive (a car)
 
 @lại
-* adv. again
+* adv
+- again
 =bắt đầu lại+to begin again
 -Still; should; back
 =cãi lại+to talk back
@@ -55118,7 +55128,8 @@
 - prison, jail
 
 @lao xao
-* adv. hubbub
+* adv
+- hubbub
 
 @Lào Cai
 - Lào Cai is one of several provinces situated on the Sino-Vietnamese borderline. It is in the northwestern part of the country. Topography of Lào Cai is diversified with rivers, high mountain peaks, steep and high mountain passes, deep streams and wide valleys. Lào Cai is home to primeval forests with several kinds of rare timber plants such as Po Mu (fukiena), Lat Hoa (chukrasia tabularis) and Cho Chị It is also the habitat of many kinds of medicinal herbs and rare animals including deer, wild boars, tigers... Lao Cai is also reputed for its mineral resources Sapa is the most attractive rendez-vous in Lào Cai. Visitors to Sapa can attempt the walk across a suspended bamboo bridge over Muong Hoa River Next to the bamboo bridge is a beautiful water fall known locally as Thác Bạc (Silver Fall). The rooftop of Vietnam is called Fansipan mountain peak which is 3,141m above sea level. The highest peak in Vietnam is in Hoang Lien Son mountain range
@@ -55257,7 +55268,8 @@
 - to attempt; to intend
 
 @lắm
-* adv. much; many; very; a lot
+* adv
+- much; many; very; a lot
 =tôi yêu cô ta lắm+I'm very love of her
 =lắm lần+many times
 
@@ -55801,7 +55813,8 @@
 =lén nhìn+to cast a furtive glance
 
 @lén lút
-* adv, tính từ stealthy ; stealthily ; sneaky ; sneakity
+* adv
+- stealthy ; stealthily ; sneaky ; sneakity
 
 @leng keng
 - ding-dong; tinkle
@@ -56697,6 +56710,7 @@
 
 @lỗ rún
 * noun
+- belly-button
 
 @lỗ tai
 * noun
@@ -57192,8 +57206,7 @@
 - (từ cũ; nghĩa cũ) Prostitues' medical service (thời thuộc pháp)
 
 @ lui
-* noun
-* verb
+* noun, verb
 - to move back; to fall back
 =lui lại một bước+to fall back a paco. to abate
 =cơn sốt rét đã lui+the fit of malaria has abated. to retire
@@ -58448,7 +58461,8 @@ _trash
 =nghiện ma túy+to be a drug addict
 
 @mà
-* trạng ngữ. but
+* trạng ngữ
+- but
 =không có ai mà không hiểu việc ấy cả+There is no one but understands this. what; that
 =vì việc ấy mà tôi đến+That is what I have come for
 -Where
@@ -60151,7 +60165,7 @@ _trash
 =Bị bắt không sót một mống nào+To be captured without a single person escaping
 
 @mống cụt
-=xem mống
+- xem mống
 
 @mống mắt
 - (giải phẫu) Iris
@@ -60187,11 +60201,14 @@ _trash
 =Ôm ấp một mộng tưởng+To nurse (nurture) afatastic dream
 
 @mốt
-* number. one
+* number
+- one
 =hai mươi mốt+twent one
 * noun
-- style;fashion
-=đúng mốt+infashion. the day after tomorrow
+- style; fashion
+
+@đúng mốt
+- the day after tomorrow
 
 @một
 - one
@@ -63100,7 +63117,8 @@ _trash
 - harvest time
 
 @ngày nay
-* adv. nowadays,today
+* adv
+- nowadays,today
 
 @ngày ngày
 - every day, day afterday
@@ -65267,9 +65285,9 @@ _trash
 =Trời đã ngớt mưa+The rain has abated
 =Anh ấy đã ngớt giận+His anger has subsided
 =Cơn bão đã ngớt+The storm had abated (subsided)
-=Ngơn ngớt (láy, ý giảm)
 
 @ngớt lời
+- To praise excessively
 =Không ngớt lời khen ngợi+To be lavish in one's praise for
 
 @ngu
@@ -67662,7 +67680,8 @@ _trash
 - Trade deficit
 
 @nhất
-* number. one; first
+* number
+- one; first
 =hạng nhất+first class
 
 @nhất đán
@@ -68062,7 +68081,8 @@ _trash
 - (cũ) The weaker sex
 
 @nhì
-* number. second
+* number
+- second
 
 @nhì nhằng
 * adj
@@ -68120,7 +68140,8 @@ _trash
 =Nói nhí nhố vài câu+To talk at sixes and sevens
 
 @nhị
-* number. two
+* number
+- two
 
 @nhị cái
 - (thực vật) Pistil
@@ -68494,8 +68515,8 @@ _trash
 @nhịu
 - cũng nói nói nhịu Say one word for another, make a slip of the tongue
 
-@ nhịu mồm
-=như nhịu
+@nhịu mồm
+- xem như nhịu
 
 @nho
 * noun
@@ -68774,7 +68795,8 @@ _trash
 =Đi nhón đến nôi em bé xem em còn ngủ không+To tiptoe to the baby's cradle and see whether it is still sleeping
 
 @nhón gót
-* adv. on tiptoe
+* adv
+- on tiptoe
 
 @nhón nhén
 - (địa phương)
@@ -72260,7 +72282,8 @@ _trash
 =Dở òm+Too bad
 
 @òm ọp
-* adv. splashingly
+* adv
+- splashingly
 
 @ỏm
 - Make a noise, raise a din. +Cãi nhau ỏm lên To quarrel uproariously
@@ -72860,7 +72883,8 @@ _trash
 =ống khói nhà máy+the chimneys of a factory
 
 @ống kính
-- 
+- lens
+
 @ống lòng
 - Telescopic
 =Chân kiểu ống lòng+Telescopic legs
@@ -76783,7 +76807,7 @@ _trash
 =Phứa phựa (láy, ý tăng)
 
 @phứa phựa
-=xem phứa (láy)
+- xem phứa (láy)
 
 @phức
 - Very (fragrant), very (flavoured), very (sweet-smelling)
@@ -77021,7 +77045,7 @@ _trash
 - to kill the time
 
 @qua quít
-* adv.
+* adv
 - perfunetorily
 
 @quà
@@ -82861,13 +82885,15 @@ _trash
 - Treat, process (medicinal herbs)
 
 @sao cho
-* trạng ngữ so that, in such a way as to
+* trạng ngữ 
+- so that, in such a way as to
 
 @sao chổi
 * noun
 - comet
 
 @sao chụp
+* noun
 - Photocopy
 =Bản sao chụp+Photocopy
 =Máy sao chụp+Photocopier
@@ -83877,7 +83903,6 @@ _trash
 
 @sẽ
 * adv, adj
-#Syn
 - (như) khẽ
 * adv
 - will, shall, be going to
@@ -84226,8 +84251,10 @@ _trash
 - Transcendent
 
 @sim
-- Tomentose rose myrtlẹ@sin
--(toán học) Sine
+- Tomentose rose myrtlẹ
+
+@sin
+- (toán học) Sine
 
 @sin sít
 - xem sít (láy)
@@ -84751,7 +84778,8 @@ _trash
 - Couple of swords
 
 @song le
-* trạng ngữ however, but, still
+* trạng ngữ
+- however, but, still
 
 @song loan
 - (từ cũ) Two-carrier palanquin
@@ -85396,7 +85424,8 @@ _trash
 =Lỗi sơ phạm+Mistake committed for the first time
 
 @sơ qua
-* adj, adv rough, roughly
+* adj, adv 
+- rough, roughly
 
 @sơ sài
 - Cursory, without care
@@ -85571,7 +85600,8 @@ _trash
 - Use too familiar a language (with a woman)
 
 @sớm
-* adv, tính từ early
+* adv 
+- early
 =đi làm sớm+to go to work early soon
 =về sớm+be back soon
 
@@ -85599,7 +85629,8 @@ _trash
 =Ăn cơm sớm sủa để còn đi xem hát+To have dinner earlier than usual in order to go to the theatre afterwards
 
 @sớm tối
-* trạng ngữ all day long
+* trạng ngữ 
+- all day long
 
 @sơn
 * noun
@@ -86494,7 +86525,8 @@ _trash
 - truculent, reckless
 
 @sừng sững
-* adj, adv statly, high and majestic
+* adj, adv 
+- statly, high and majestic
 
 @sửng
 * adj
@@ -87009,7 +87041,8 @@ _trash
 - second-life, rebirth
 
 @tại
-* trạng ngữ. at, in. due to, owing to, because
+* trạng ngữ
+- at, in. due to, owing to, because
 
 @tại chỗ
 - on the spot, right away
@@ -87093,7 +87126,8 @@ _trash
 - three lines of ancestry
 
 @tám
-* number eight, eightth
+* number
+- eight, eightth
 =thằng bé tám tuổi+an eight-year-old boy
 
 @tám mươi
@@ -87145,10 +87179,12 @@ _trash
 - to disintegrate, to separate
 
 @tan tác
-* adv. in utter disarray
+* adv
+- in utter disarray
 
 @tan tành
-* adv. into pieces
+* adv
+- into pieces
 
 @tan vỡ
 * adj
@@ -87425,7 +87461,8 @@ _trash
 - overbold, daring
 
 @táo tác
-* adv. stampedingly
+* adv
+- stampedingly
 
 @tạo
 * verb
@@ -89967,7 +90004,8 @@ _trash
 - sports
 
 @thể theo
-* trạng ngữ compliance with
+* trạng ngữ
+- compliance with
 
 @thể thống
 * noun
@@ -92774,7 +92812,8 @@ _trash
 - sentiment, affection
 
 @tình cờ
-* adj, adv by chance, accidental
+* adj, adv
+- by chance, accidental
 
 @tình hình
 * noun
@@ -93514,7 +93553,8 @@ _trash
 - to revenge
 
 @trác táng
-* adj, adv licentious, loose
+* adj, adv
+- licentious, loose
 
 @trác tuyệt
 * adj
@@ -93767,7 +93807,8 @@ _trash
 - to sprain
 
 @trăm
-* number hundred
+* number
+- hundred
 
 @trăn
 * noun
@@ -94183,7 +94224,8 @@ _trash
 - courtier
 
 @triệu
-* number million to recall
+* number
+- million to recall
 
 @triệu phú
 * noun
@@ -94856,7 +94898,8 @@ _trash
 - to extirpate
 
 @trừ phi
-* trạng ngữ unless
+* trạng ngữ
+- unless
 
 @trữ
 * verb
@@ -94967,7 +95010,8 @@ _trash
 - firstly, above all
 
 @trước tiên
-* adv, tính từ first, firstly
+* adv 
+- first, firstly
 
 @trườn
 * verb
@@ -95778,7 +95822,8 @@ _trash
 - similar
 
 @tựa hồ
-* trạng ngữ as if, as though
+* trạng ngữ
+- as if, as though
 
 @tức cười
 * adj
@@ -96878,7 +96923,8 @@ _trash
 - side, wing
 
 @vầy
-* adj, adv so, this way, like this
+* adj, adv
+- so, this way, like this
 
 @vẫy
 * verb
@@ -97048,7 +97094,8 @@ _trash
 - whizzing
 
 @vì
-* trạng ngữ because, for, as; for the sake of
+* trạng ngữ
+- because, for, as; for the sake of
 
 @vì sao
 * noun
@@ -97086,7 +97133,8 @@ _trash
 - in case, if as for, with regrad to
 
 @ví thử
-* trạng ngữ if, supposing
+* trạng ngữ
+- if, supposing
 
 @vị
 * noun
@@ -99115,7 +99163,8 @@ _trash
 - to visit
 
 @yết thị
-* verb, noun post, playcard
+* verb, noun
+- post, playcard
 
 @yêu
 * verb
