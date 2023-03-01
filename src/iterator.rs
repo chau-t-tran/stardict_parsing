@@ -27,7 +27,6 @@ impl Iterator for EntryIterator {
             }
         }
         let raw = lines.join("\n");
-        println!("INPUT: {}", raw);
         let entry = parse_entry(raw.as_str());
         Some(entry)
     }
