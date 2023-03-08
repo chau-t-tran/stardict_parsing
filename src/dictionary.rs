@@ -29,7 +29,7 @@ pub struct Sentence {
 }
 
 #[derive(PartialEq, Eq, Debug, Clone, Default)]
-pub struct Definition {
+pub struct Sense {
     pub part_of_speech: TAPair,
     pub definition: TAPair,
     pub sentences: Vec<Sentence>,
@@ -38,7 +38,7 @@ pub struct Definition {
 #[derive(PartialEq, Eq, Debug, Clone, Default)]
 pub struct Entry {
     pub word: TAPair,
-    pub defs: Vec<Definition>,
+    pub senses: Vec<Sense>,
 }
 
 #[derive(PartialEq, Eq, Debug, Clone, Default)]
@@ -58,21 +58,21 @@ fn parse_sentence(p: Pair<Rule>) -> Sentence {
     sentence
 }
 
-fn parse_def(p: Pair<Rule>) -> Definition {
-    let mut definition: Definition = Default::default();
+fn parse_sense(p: Pair<Rule>) -> Sense {
+    let mut sense: Sense = Default::default();
     for field in p.into_inner() {
         match field.as_rule() {
             Rule::part_of_speech => {
-                definition.part_of_speech = TAPair::new(field.as_str().trim().to_string())
+                sense.part_of_speech = TAPair::new(field.as_str().trim().to_string())
             }
-            Rule::description => {
-                definition.definition = TAPair::new(field.as_str().trim().to_string())
+            Rule::definition => {
+                sense.definition = TAPair::new(field.as_str().trim().to_string())
             }
-            Rule::sentence => definition.sentences.push(parse_sentence(field)),
+            Rule::sentence => sense.sentences.push(parse_sentence(field)),
             _ => println!("Error, fields not found"),
         }
     }
-    definition
+    sense
 }
 
 pub fn parse_entry(raw: &str) -> Entry {
@@ -84,7 +84,7 @@ pub fn parse_entry(raw: &str) -> Entry {
     for field in data.into_inner() {
         match field.as_rule() {
             Rule::word => entry.word = TAPair::new(field.as_str().trim().to_string()),
-            Rule::definition => entry.defs.push(parse_def(field)),
+            Rule::sense => entry.senses.push(parse_sense(field)),
             _ => println!("Error, fields not found"),
         }
     }
@@ -101,7 +101,7 @@ fn test_parse_entry_basic() {
 
     let entry = Entry {
         word: TAPair::new("an phận".to_string()),
-        defs: vec![Definition {
+        senses: vec![Sense {
             part_of_speech: TAPair::new("verb".to_string()),
             definition: TAPair::new("To feel smug".to_string()),
             sentences: vec![

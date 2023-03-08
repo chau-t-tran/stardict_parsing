@@ -1,13 +1,13 @@
-entry = ${ word_wrapper ~ definition+ }
+entry = ${ word_wrapper ~ sense+ }
 
 word_wrapper = _{ "@" ~ word ~ "\n" }
-definition = { pos_wrapper? ~ def_wrapper ~ sentence* }
+sense = { pos_wrapper? ~ def_wrapper ~ sentence* }
 pos_wrapper = _{ ("* " | "*") ~ part_of_speech ~ "\n" }
-def_wrapper = _{ ("- " | "-") ~ description ~ "\n" }
+def_wrapper = _{ ("- " | "-") ~ definition ~ "\n" }
 sentence = ${ ("=" | " =") ~ viet ~ "+" ~ eng ~ ("\n" | "\r")+ }
 
 word = ${ word_char* }
-description = @{ def_char* }
+definition = @{ def_char* }
 viet = @{ sent_char* }
 eng = @{ sent_char* }
 part_of_speech = @{ pos_char* }

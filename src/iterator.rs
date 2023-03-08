@@ -50,8 +50,8 @@ fn test_parse_entry_by_entry_from_file() {
     let first_entry: Entry = entry_iterator.next().unwrap();
     let first_expected = Entry {
         word: TAPair::new("00-database-info".to_string()),
-        defs: vec![
-            Definition {
+        senses: vec![
+            Sense {
                 part_of_speech: TAPair::new("".to_string()),
                 definition: TAPair::new(
                     "This is the Vietnamese-English dictionary \
@@ -62,7 +62,7 @@ fn test_parse_entry_by_entry_from_file() {
                 ),
                 sentences: vec![],
             },
-            Definition {
+            Sense {
                 part_of_speech: TAPair::new("".to_string()),
                 definition: TAPair::new(
                     "This database was compiled by Ho Ngoc Duc and \
@@ -72,14 +72,14 @@ fn test_parse_entry_by_entry_from_file() {
                 ),
                 sentences: vec![],
             },
-            Definition {
+            Sense {
                 part_of_speech: TAPair::new("".to_string()),
                 definition: TAPair::new(
                     "Copyright (C) 1997-2003 The Free Vietnamese Dictionary Project".to_string(),
                 ),
                 sentences: vec![],
             },
-            Definition {
+            Sense {
                 part_of_speech: TAPair::new("".to_string()),
                 definition: TAPair::new(
                     "This program is free software; you can redistribute it and/or \
@@ -99,7 +99,7 @@ fn test_parse_entry_by_entry_from_file() {
     let second_entry: Entry = entry_iterator.next().unwrap();
     let second_expected = Entry {
         word: TAPair::new("00-database-short".to_string()),
-        defs: vec![Definition {
+        senses: vec![Sense {
             part_of_speech: TAPair::new("".to_string()),
             definition: TAPair::new("FVDP Vietnamese-English dictionary".to_string()),
             sentences: vec![],
@@ -109,7 +109,7 @@ fn test_parse_entry_by_entry_from_file() {
     let third_entry: Entry = entry_iterator.next().unwrap();
     let third_expected = Entry {
         word: TAPair::new("00-database-url".to_string()),
-        defs: vec![Definition {
+        senses: vec![Sense {
             part_of_speech: TAPair::new("".to_string()),
             definition: TAPair::new("http://www.informatik.uni-leipzig.de/~duc/Dict/".to_string()),
             sentences: vec![],
