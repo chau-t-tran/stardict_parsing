@@ -12,6 +12,7 @@ extern crate pest_derive;
 
 mod dictionary;
 mod iterator;
+mod sql;
 
 #[derive(Debug, Parser)]
 struct Cli {
